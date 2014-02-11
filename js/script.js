@@ -25,10 +25,12 @@ function init() {
     for(var i = 0; i < 10; i++) {
 
         var flag = (i % 2)*2 -1;
+        var relativeDis = -i*600+position.z;
+        var degree = 90* 1/ (relativeDis*relativeDis/360000 + 1) * -flag /2;
 
         $('.img3d').append('<div class="package" id="img' + i + '"><img src="./img/wedding' + (i%3+1) + '.jpg" onClick="showInfo(' + i + ')"><div class="shadow"></div></div>');
         $('#img'+i).css({
-            '-webkit-transform':'translate3d(' + (flag*300) + 'px,0px,' + (-i*600) + 'px) rotateY(' + (-flag * 30) + 'deg)',
+            '-webkit-transform':'translate3d(' + (flag*300) + 'px,0px,' + relativeDis + 'px) rotateY(' + degree + 'deg)',
             'z-index': -i*10
         });
     }
@@ -111,7 +113,6 @@ function onMouseWheel( event ) {
         var flag = (i % 2)*2 -1;
         var relativeDis = -i*600+position.z;
         var degree = 90* 1/ (relativeDis*relativeDis/360000 + 1) * -flag /2;
-        console.log(degree);
 
         $('#img'+i).css({
             '-webkit-transform':'translate3d(' + (flag*300) + 'px,0px,' + relativeDis + 'px) rotateY(' + degree + 'deg)',
