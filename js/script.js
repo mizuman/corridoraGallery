@@ -35,6 +35,8 @@ function init() {
         });
     }
 
+    // hogehoge
+
     // var floor = addFloor();
     scene.add(addFloor());
 
