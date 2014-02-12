@@ -51,7 +51,7 @@ function init() {
 }
 
 function showInfo(picNum) {
-    var item = '<h2>Infomation</h2><p>' + (picNum+1) + '番目の画像に関する情報</p></div>'
+    var item = '<h2>Information</h2><p>' + (picNum+1) + '番目の画像に関する情報</p></div>'
 
     $("#infoLayer").html(item);
 }
