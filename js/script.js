@@ -28,7 +28,8 @@ function init() {
         var relativeDis = -i*600+position.z;
         var degree = 90* 1/ (relativeDis*relativeDis/360000 + 1) * -flag /2;
 
-        $('.img3d').append('<div class="package" id="img' + i + '"><img src="./img/wedding' + (i%3+1) + '.jpg" onClick="showInfo(' + i + ')"><div class="shadow"></div></div>');
+        //$('.img3d').append('<div class="package" id="img' + i + '"><img src="./img/wedding' + (i%3+1) + '.jpg" onClick="showInfo(' + i + ')"><div class="shadow"></div></div>');
+        $('.img3d').append('<div class="package" id="img' + i + '"><img src="./img/wedding' + (i%3+1) + '.jpg" onClick="showInfo(' + i + ')"></div>');
         $('#img'+i).css({
             '-webkit-transform':'translate3d(' + (flag*300) + 'px,0px,' + relativeDis + 'px) rotateY(' + degree + 'deg)',
             'z-index': -i*10
@@ -51,7 +52,7 @@ function init() {
 }
 
 function showInfo(picNum) {
-    var item = '<h2>Infomation</h2><p>' + (picNum+1) + '番目の画像に関する情報</p></div>'
+    var item = '<h2>Information</h2><p>' + (picNum+1) + '番目の画像に関する情報</p></div>'
 
     $("#infoLayer").html(item);
 }
