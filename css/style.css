@@ -131,23 +131,12 @@ canvas {
 	-webkit-transform: translate3d(0,-20px,0);
 }
 
-.package:after {
-	content: '';
-	border: 5px solid #000;
-	box-shadow: 0px 300px 10px 0px #adadad;
-	position: absolute;
-	top: 80%;
-	width: 100%;
-	z-index: -100;
-}
-
 .shadow {
 	height: 20px;
 	width: 300px;
 	-webkit-box-shadow: 0px 30px 30px -4px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 30px 30px -4px rgba(0,0,0,0.5);
 	box-shadow: 0px 30px 30px -4px rgba(0,0,0,0.5);
-
 }
 /*==========*/
 .package:hover {
