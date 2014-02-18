@@ -91,6 +91,8 @@ function animate() {
 function onMouseWheel( event ) {
 
     var dis = 0;
+    var MIN_DEPTH = 0;
+    var MAX_DEPTH = 5000;
 
     if ( event.wheelDelta ) { // WebKit / Opera / Explorer 9
         dis = - event.wheelDelta;
@@ -100,14 +102,9 @@ function onMouseWheel( event ) {
 
     var moveDistance = dis;
 
-
-    if ( dis > 0 ) {
-        camera.translateZ( moveDistance );
-        position.z -= moveDistance/2;
-    } else {
-        camera.translateZ( moveDistance );
-        position.z -= moveDistance/2;
-    }
+    position.z -= moveDistance/2;
+    if(position.z<MIN_DEPTH) position.z = MIN_DEPTH;
+    else if(position.z>MAX_DEPTH) position.z=MAX_DEPTH;
 
     for(var i = 0; i < 10; i++) {
 
