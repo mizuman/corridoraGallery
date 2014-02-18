@@ -49,7 +49,7 @@ canvas{
 	text-decoration: none;
 }
 
-.git-btn {
+/*.git-btn {
 	background-color: rgb(255,100,100);
 	border: none;
 	border-radius: 5px;
@@ -75,7 +75,7 @@ canvas{
 	position: relative;
 	top: 1px;
 	left: 1px;
-}
+}*/
 
 .info p{
 	margin:0 0 .2em;
@@ -155,18 +155,47 @@ canvas {
 #fix-footer {
 	background-color: #555;
 	margin-left: -10px;
-	height: 50px;
+	height: 80px;
 	width: 110%;
 	position: absolute;
 	bottom: 0;
 }
 
-#fix-footer p{
+#fix-footer:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#fix-footer p {
 	color: #fff;
 	font-family: "Open Sans", sans-serif;
 	font-size: 0.8rem;
 	font-weight: 300;
 	letter-spacing: 0.2em;
-	padding: 5px 0 0 50px;
+	padding-left: 50px;
+}
+
+#fix-footer a {
+	border: 1px solid #fff;
+	color: #fff;
+	display: inline-block;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.8rem;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	margin: 10px 0 0 50px;
+	padding: 3px 5px 3px 5px;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+
+#fix-footer a:hover {
+	border: 1px solid rgb(255,150,150);
+	color: rgb(255,150,150);
 }
 /*==========*/
